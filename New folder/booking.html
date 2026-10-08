@@ -1,0 +1,146 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ExploreWorld - Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav>
+        <h1>🌍 ExploreWorld</h1>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Page Heading -->
+<section class="page-title">
+
+    <h2>✈️ Book Your Trip</h2>
+
+    <p>Plan your dream vacation with ExploreWorld.</p>
+
+</section>
+
+
+<!-- Booking Section -->
+<section class="booking-section">
+
+    <div class="booking-box">
+
+        <h2>Travel Booking Form</h2>
+
+        <form onsubmit="showBookingMessage(event)">
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+
+            <label>Mobile Number</label>
+            <input type="tel" id="mobile" placeholder="Enter mobile number"
+                   pattern="[0-9]{10}" required>
+
+
+            <label>Select Destination</label>
+
+            <select id="destination" required>
+
+                <option value="">-- Select Destination --</option>
+                <option>Goa</option>
+                <option>Ooty</option>
+                <option>Kerala</option>
+                <option>Dubai</option>
+                <option>Maldives</option>
+                <option>Paris</option>
+
+            </select>
+
+
+            <label>Select Package</label>
+
+            <select required>
+
+                <option value="">-- Select Package --</option>
+                <option>Goa Beach Escape - ₹8,999</option>
+                <option>Ooty Hill Escape - ₹7,499</option>
+                <option>Kerala Paradise - ₹12,999</option>
+                <option>Dubai Luxury Trip - ₹39,999</option>
+                <option>Maldives Getaway - ₹45,999</option>
+                <option>Paris Explorer - ₹69,999</option>
+
+            </select>
+
+
+            <label>Travel Date</label>
+            <input type="date" required>
+
+
+            <label>Number of Travelers</label>
+            <input type="number" min="1" max="20"
+                   placeholder="Enter number of travelers" required>
+
+
+            <label>Special Requirements</label>
+            <textarea rows="4"
+                      placeholder="Any special requirements?"></textarea>
+
+
+            <button type="submit" class="submit-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+        <div id="bookingMessage"></div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 ExploreWorld | Travel & Tourism</p>
+</footer>
+
+
+<script>
+
+function showBookingMessage(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    document.getElementById("bookingMessage").innerHTML =
+        "🎉 <strong>Booking Successful!</strong><br>" +
+        "Thank you, " + name +
+        "! Your travel booking request has been received.";
+
+}
+
+</script>
+
+</body>
+</html>
+```
